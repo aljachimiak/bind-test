@@ -1,2 +1,2 @@
 # bind-test
-testing different methods of data binging
+testing different methods of data binding
