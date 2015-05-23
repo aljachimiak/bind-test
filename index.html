@@ -1,1 +1,29 @@
-<h1>Hi!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Binding Example</title>
+</head>
+<body>
+
+<h1>Bind Bare TextArea to a paragraph</h1>
+<h2>Using Vanilla Javascript</h2>
+
+<textarea id='type-here'></textarea>
+
+<hr>
+
+<p id="put-here"></p>
+
+
+	<script>
+	var elem = document.getElementById('type-here');
+	var div = document.getElementById('put-here');
+	elem.onkeyup = function(e) {
+		div.innerText = elem.value;
+	}
+	</script>
+	
+</body>
+</html>
+
