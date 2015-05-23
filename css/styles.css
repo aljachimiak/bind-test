@@ -1,0 +1,12 @@
+/* styles.css */
+
+.row {
+	width:100%;
+	clear: both;
+}
+
+.gridHalf{
+	width: 47.5%;
+	margin-right: 2.4%;
+	float:left;
+}

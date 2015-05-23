@@ -3,26 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Data Binding Example</title>
+
+	<link rel="stylesheet" href="/css/styles.css">
 </head>
+
+
 <body>
 
 <h1>Bind Bare TextArea to a paragraph</h1>
 <h2>Using Vanilla Javascript</h2>
 
-<textarea id='type-here'></textarea>
+<div class="row">
+	<div class="gridHalf">
+		<textarea id='type-here'></textarea>
+	</div>
 
-<hr>
+	<div class="gridHalf">
+		<p id="put-here"></p>
+	</div>
 
-<p id="put-here"></p>
+</div>
 
-
-	<script>
-	var elem = document.getElementById('type-here');
-	var div = document.getElementById('put-here');
-	elem.onkeyup = function(e) {
-		div.innerText = elem.value;
-	}
-	</script>
+<script src="/js/basic.js"></script>
+<script src="/vendor/jQuery/jquery-2.1.4.min.js"></script>
 	
 </body>
 </html>

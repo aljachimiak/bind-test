@@ -9,6 +9,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
+  config.vm.synced_folder "./", "/vagrant", id: "vagrant-root",
+  owner: "vagrant",
+  group: "www-data",
+  mount_options: ["dmode=775,fmode=664"]
+
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "ubuntu/trusty64"
 
