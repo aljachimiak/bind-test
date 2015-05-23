@@ -6,7 +6,13 @@
 }
 
 .gridHalf{
-	width: 47.5%;
+	width: 46%;
 	margin-right: 2.4%;
-	float:left;
+	display: inline-block; 
+	vertical-align: top;
+	overflow: hidden
+}
+
+textarea{ 
+	width:90%;
 }
