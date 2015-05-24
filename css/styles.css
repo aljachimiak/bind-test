@@ -1,16 +1,24 @@
 /* styles.css */
 
-.row {
-	width:100%;
-	clear: both;
-}
-
+/* The Grid */
 .gridHalf{
 	width: 46%;
 	margin-right: 2.4%;
 	display: inline-block; 
 	vertical-align: top;
 	overflow: hidden
+}
+.row {
+	width:100%;
+	clear: both;
+}
+
+/* Other stuff */
+small {
+	font-size: .5em;
+	color: #aaa;
+	font-style: oblique;
+	display:block;
 }
 
 textarea{ 
