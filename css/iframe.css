@@ -3,3 +3,10 @@
   font-size: 26px;
   font-family: sans-serif;
 }
+section:before {
+	content: 'Section:';
+}
+section { 
+	margin:2%;
+	border: 1px dotted purple;
+}
