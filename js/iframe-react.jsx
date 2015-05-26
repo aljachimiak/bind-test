@@ -72,7 +72,7 @@ var Hello = React.createClass({
 						<div className="gridHalf">
 						  Below is an iframe:
 							<Frame head={
-              	<link type='text/css' rel='stylesheet' href='/css/iframe.css' />
+              	<link type='text/css' rel='stylesheet' href='./css/iframe.css' />
             	}>
 	              <div>
 	              	{this.state.contents}
