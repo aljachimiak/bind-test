@@ -1,0 +1,46 @@
+server {
+	listen 80;
+	root			/vagrant/properties/dev_cmisutah_com;
+	index			index.php;
+
+	server_name cmis-utah.doesntexist.com dev.cmibs.com;
+	
+
+	add_header "Built-with" "statamic";
+	add_header "X-UA-Compatible" "IE=Edge,chrome=1";
+
+	# Deny access to configuration files
+	location ~* ^/_config {
+		deny all;
+		return 404;
+	}
+	# Favicon
+	location ~* \.ico$ {
+		expires 1w;
+		add_header Cache-Control "public";
+	}
+	# deny access to any hidden files starting with ".", eg. .htaccess .git, etc
+	location ~ /\. {
+		deny all;
+		return 404;
+		log_not_found off;
+	}
+
+	location ~ (\.yaml) {
+		return 404;
+	}
+
+	# Return a static file, if it exists, or pass to front controller
+	location / {
+		rewrite ^/admin.php.*$ /admin.php;
+		try_files $uri $uri/ /index.php?$args;
+	}
+
+	location ~ \.php$ {
+	      try_files $uri =404;
+	      fastcgi_split_path_info ^(.+\.php)(/.+)$;
+	      fastcgi_pass unix:/var/run/php5-fpm-dev_cmisutah_com.socket;
+	      fastcgi_index index.php;
+	      include fastcgi_params;
+	}
+}
