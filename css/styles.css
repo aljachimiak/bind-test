@@ -12,6 +12,9 @@
 	width:100%;
 	clear: both;
 }
+.row a {
+	display:block;
+}
 
 /* Other stuff */
 small {
@@ -23,4 +26,8 @@ small {
 
 textarea{ 
 	width:90%;
+}
+
+iframe {
+	width: 95%;
 }
