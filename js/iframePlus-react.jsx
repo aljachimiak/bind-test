@@ -84,7 +84,7 @@ var Hello = React.createClass({
                 <div>
                 {contentsArr.map(function(x){
                   console.log(contentsArr);
-                  return <Section content={x.text} key={x.id} />
+                  return <Section content={x.text} key={x.key} />
                 }) }
                 </div>
               </Frame>

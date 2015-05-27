@@ -10,8 +10,6 @@
 	<h1>Reveal-React <small>Creating a reveal.js slideshow with react (not complete) </small></h1>
 	<hr>
 
-	<iframe src="./test-pres.html" frameborder="0" width=500 height=300 ></iframe>
-
 	<div id="react-location"></div>
 
 <hr>
@@ -38,9 +36,11 @@
 	
 </body>
 
-
-<script ajax src="./vendor/react/build/react-with-addons.js"></script>
-<script ajax src="./vendor/react/build/JSXTransformer.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.17/require.js"></script> -->
+<script  src="./vendor/react/build/react-with-addons.js"></script>
+<script  src="./vendor/react/build/JSXTransformer.js"></script>
+<script type="text/jsx" src="./vendor/mixins/ReactScriptLoader.jsx"></script>
+<script type="text/jsx" src="./js/Reveal-script.jsx"></script>
 <script type="text/jsx" src="./js/reveal-react.jsx"></script>
 
 

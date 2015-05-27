@@ -15,6 +15,7 @@ var Frame = React.createClass({
       var doc = this.getDOMNode().contentWindow.document;
       
       if(doc.readyState === 'complete') {
+        console.log("ready and rendering");
         var contents = (
           <div>
             &shy;{this.props.head}
@@ -28,6 +29,7 @@ var Frame = React.createClass({
       }
     },
     componentDidUpdate: function() {
+      console.log("didUpdate");
       this.renderFrameContents();
     },
     componentWillUnmount: function() {

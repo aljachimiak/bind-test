@@ -29,5 +29,6 @@ textarea{
 }
 
 iframe {
-	width: 95%;
+	width: 500px;
+	height: 300px;
 }

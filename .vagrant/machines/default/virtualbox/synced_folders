@@ -1,1 +1,1 @@
-{"virtualbox":{"vagrant-root":{"id":"vagrant-root","owner":"vagrant","group":"www-data","mount_options":["dmode=775,fmode=664"],"guestpath":"/vagrant","hostpath":"/Volumes/Secondary/Al's Data/Dropbox/GitSandbox/bind-test","disabled":false}}}
+{"virtualbox":{"vagrant-root":{"id":"vagrant-root","owner":"vagrant","group":"www-data","mount_options":["dmode=775,fmode=664"],"guestpath":"/vagrant","hostpath":"/Users/aljachimiak/Dropbox/GitSandbox/bind-test"}}}
