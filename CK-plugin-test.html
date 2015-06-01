@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Simple Binding with React</title>	
+	<title>CK-plugin-test</title>
+
 	<link rel="stylesheet" href="./css/styles.css">
 	<script src="./vendor/jQuery/jquery-2.1.4.min.js"></script>
 </head>
 <body>
-	<h1>Simple-React <small>Simple element Binding with React Components</small></h1>
+	<h1>CKEditor Plugin test<small>Insert a <code>&lt;span&gt;</code> from the CKEditor toolbar</small></h1>
+
+	<div id="toEdit">
+		<p>This is some sample starting content.</p>
+	</div>
+
 	<hr>
-
-	<div id="react-location"></div>
-
-<hr>
 <div class="row">
 	<div class="gridHalf">
 		<a href="./index.html">Simple binding with Vanilla JS</a>
@@ -33,15 +35,10 @@
 		<a href="./CK-plugin-test.html">Create a simple CKEditor plugin</a>
 	</div>
 </div>
+
+	<script src="./vendor/ckeditor/ckeditor.js"></script>
+	<script src="./js/ck-plugin-test.js"></script>
+
 	
 </body>
-
-
-<script src="./vendor/react/build/react-with-addons.js"></script>
-<script src="./vendor/react/build/JSXTransformer.js"></script>
-<script type="text/jsx" src="./js/simple-react.jsx"></script>
-
 </html>
-
-
-

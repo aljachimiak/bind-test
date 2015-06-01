@@ -35,4 +35,10 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
+
+	// custom plugin
+	config.extraPlugins = 'newSlide';
+	config.extraAllowedContent = 'hr {*}(*)';
+	config.disableNativeSpellChecker = false;
+	config.removePlugins = 'magicline,spellchecker';
 };
