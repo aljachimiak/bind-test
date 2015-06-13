@@ -7,6 +7,7 @@ var Section = React.createClass({
   }
 
 });
+
 var Frame = React.createClass({
     render: function() {
         return <iframe />;
@@ -52,7 +53,7 @@ var TypeBox = React.createClass({
         ref="typeBoxInput" 
         value={this.props.value} 
         onChange={this.update} 
-        placeholder="Type Something...">
+        placeholder="Type Something..." >
       </textarea>
     )
   }
@@ -65,7 +66,6 @@ var Reveal = React.createClass({
 		)
 	}
 });
-
 
 var Hello = React.createClass({
     getInitialState: function() {
@@ -81,30 +81,28 @@ var Hello = React.createClass({
         var contentsArr = ArrToObject(contentsForSection.split("---"));
         return (
         	<div>
-        	<Frame head='' >
-                
-								<div className="reveal">
-								<div className="slides">
-                {contentsArr.map(function(x){
-                  return <Section content={x.text} key={x.key} />
-                }) }
-                </div>
-                </div>
-                <script id="revealScript" async src="./vendor/reveal/js/reveal.js"></script>
-								<script id="initScript" async src="./js/reveal-init.js"></script>
-								<link href="./vendor/reveal/css/reveal.css" rel="stylesheet"></link>
-      					<link id="theme" href="./vendor/reveal/css/theme/serif.css" rel="stylesheet"></link>
-          </Frame>
+          	<Frame head='' >
+                  
+  								<div className="reveal">
+  								<div className="slides">
+                  {contentsArr.map(function(x){
+                    return <Section content={x.text} key={x.key} />
+                  }) }
+                  </div>
+                  </div>
+  								<link href="./vendor/reveal/css/reveal.css" rel="stylesheet"></link>
+        					<link id="theme" href="./vendor/reveal/css/theme/serif.css" rel="stylesheet"></link>
+            </Frame>
 
-          <div className="row">
+            <div className="row">
 
-            <div className="gridHalf">
-            <p>Use Three hyphens in a row to create a new section in the iframe (ex: "---").</p>
-              <TypeBox value={this.state.value} updateValue={this.updateValue} />
+              <div className="gridHalf">
+              <p>Use Three hyphens in a row to create a new section in the iframe (ex: "---").</p>
+                <TypeBox value={this.state.value} updateValue={this.updateValue} />
+              </div>
+
+              <div className="gridHalf"></div>
             </div>
-
-            <div className="gridHalf"></div>
-          </div>
           </div>
             
         );
