@@ -7,23 +7,35 @@
 	<script src="./vendor/jQuery/jquery-2.1.4.min.js"></script>
 	<style>
 		iframe{
-			/*width: calc(50vw * .9);
+			width: calc(50vw * .9);
 			height: calc(30vw * .9);
 			display: block;
-			margin: 10px auto; */
+			margin: 10px auto;
 		}
 	</style>
 </head>
 <body>
 	<h1>CK - Reveal -React <small>Create and edit a live Reveal slideshow with React</small></h1>
 	<hr>
-
-	<div id="react-location"></div>
+  <div class="row">
+  	<div class="gridHalf">
+  			<div id="toEdit">
+					<p>This is some sample starting content on the first slide.</p>
+					<hr class="newSlide" />
+					<p>This is on the second slide</p>
+				</div>
+  	</div>
+  	<div class="gridHalf">
+  		<div id="react-location"></div>
+  	</div>
+  </div>
+	
 	
 </body>
-
-<script  src="./vendor/react/build/react-with-addons.js"></script>
-<script  src="./vendor/react/build/JSXTransformer.js"></script>
+<script src="./vendor/ckeditor/ckeditor.js"></script>
+<script src="./js/ck-plugin-test.js"></script>
+<script src="./vendor/react/build/react-with-addons.js"></script>
+<script src="./vendor/react/build/JSXTransformer.js"></script>
 <script type="text/jsx" src="./js/ck-reveal-react.jsx"></script>
 <script src="./js/menu.js"></script>
 

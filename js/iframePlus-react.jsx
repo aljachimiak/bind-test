@@ -83,7 +83,6 @@ var Hello = React.createClass({
               }>
                 <div>
                 {contentsArr.map(function(x){
-                  console.log(contentsArr);
                   return <Section content={x.text} key={x.key} />
                 }) }
                 </div>
@@ -99,7 +98,6 @@ function ArrToObject(arr){
   for (var i = 0; i < arr.length; i++) {
     var temp = {};
     temp.key = (i + 1000)+'unique';
-    console.log(i);
     temp.text = arr[i];
     toReturn[i] = temp;
   }
