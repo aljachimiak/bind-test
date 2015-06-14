@@ -24,7 +24,7 @@ var menu = '<hr/>								'+
 '<div class="row">							'+
 	
 '	<div class="gridHalf">				'+
-'		<a href="./CK-reveal-react.html">Connect CK Editor to Reveal</a> '+
+'		<a href="./ck-reveal-react.html">Connect CK Editor to Reveal</a> '+
 '	</div>												'+
 '	<div class="gridHalf">				'+
 		
