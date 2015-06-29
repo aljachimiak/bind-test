@@ -4,6 +4,7 @@
 // https://developer.zendesk.com/blog/rendering-to-iframes-in-react
 //
 //----------------------------*/
+function js () {
 var Frame = React.createClass({
     render: function() {
         return <iframe />;
@@ -88,5 +89,6 @@ var Hello = React.createClass({
 });
 
 React.render(<Hello />, document.getElementById('react-location'));
-
+}
+js();
 

@@ -49,14 +49,19 @@ function ShowCode(){
 	var mystring = code;
 	var newLine = "\n";
 	var regex = new RegExp(newLine, "g");
-	linedCode = mystring.replace(regex, "<br>");
+	linedCode = mystring.replace(regex, "</span><br><span class='lineNumber'>");
 
 	mystring = linedCode;
 	var tab = "\t";
-	var regex = new RegExp(tab, "g");
-	newCode = mystring.replace(regex, "  &nbsp;&nbsp;");
+	regex = new RegExp(tab, "g");
+	tabbedCode = mystring.replace(regex, "&nbsp;&nbsp;");
 
-	p.innerHTML = newCode;
+	mystring = tabbedCode;
+	var spaces = "  ";
+	regex = new RegExp(spaces, "g");
+	newCode = mystring.replace(regex, "  &nbsp;&nbsp;")
+
+	p.innerHTML = "<span class='lineNumber'>" + newCode + " </span>";
 
 	modal.appendChild(p);	
 
@@ -84,10 +89,10 @@ function ShowCode(){
 	a.id = "remove";
 	a.onclick = RemoveCode;
 	$(a).css({
-		position: "absolute",
+		position: "fixed",
 		color: "white",
-		right: 0,
-		top: 0,
+		right: "1em",
+		top: "calc(1em + 5%)",
 		fontSize: "32px",
 		cursor: "pointer",
 		margin: ".5em"

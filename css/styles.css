@@ -1,12 +1,6 @@
 /* styles.css */
 
 /* The Grid */
-button {
-	margin-left:20px;
-}
-hr:first-of-type {
-	margin-top:30px;
-}
 .gridHalf{
 	width: 46%;
 	margin-right: 2.4%;
@@ -21,8 +15,39 @@ hr:first-of-type {
 .row a {
 	display:block;
 }
+/* line numbers for code display */
+.lineNumber {
+	counter-increment: code_line;
+	margin-right:1.5em;
+}
+.lineNumber:before {
+	content: counter(code_line);	
+	margin-right:1.5em;
+}
+.lineNumber:hover {
+	background: #000;
+	color: #fff;
+}
+#modal ::-moz-selection { 
+	color: #1B1F92;
+	background-color: #eee;
+}
+#modal ::selection { 
+	color: #1B1F92;
+	background-color: #eee; 
+}
+
 
 /* Other stuff */
+body {
+	font-family: sans-serif;
+}
+button {
+	margin-left:20px;
+}
+hr:first-of-type {
+	margin-top:30px;
+}
 p#put-here {
 	background: lavender;
 	box-shadow: 0 0 5px #ccc;

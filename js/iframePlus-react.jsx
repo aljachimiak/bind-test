@@ -1,3 +1,4 @@
+function js() {
 var Section = React.createClass({
   render: function() {
     var content = this.props.content;
@@ -104,3 +105,5 @@ function ArrToObject(arr){
   return toReturn;
 }
 React.render(<Hello />, document.getElementById('react-location'));
+}
+js();
