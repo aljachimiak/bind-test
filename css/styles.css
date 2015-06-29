@@ -1,6 +1,12 @@
 /* styles.css */
 
 /* The Grid */
+button {
+	margin-left:20px;
+}
+hr:first-of-type {
+	margin-top:30px;
+}
 .gridHalf{
 	width: 46%;
 	margin-right: 2.4%;
@@ -17,6 +23,14 @@
 }
 
 /* Other stuff */
+p#put-here {
+	background: lavender;
+	box-shadow: 0 0 5px #ccc;
+}
+iframe {
+	width: 500px;
+	height: 300px;
+}
 small {
 	font-size: .5em;
 	color: #aaa;
@@ -26,9 +40,4 @@ small {
 
 textarea{ 
 	width:90%;
-}
-
-iframe {
-	width: 500px;
-	height: 300px;
 }

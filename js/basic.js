@@ -1,6 +1,10 @@
-	var elem = document.getElementById('type-here');
-	var div = document.getElementById('put-here');
-	
+function js() {
+	elem = document.getElementById('type-here');
+	div = document.getElementById('put-here');
+		
 	elem.onkeyup = function(e) {
-		div.innerText = elem.value;
+		div.textContent = elem.value;
 	}
+}
+js();
+
