@@ -106,7 +106,6 @@ function RemoveCode(){
 
 function CodeButton() {
 	var button = document.createElement("button");
-	console.log(button)
 	button.onclick = ShowCode;
 	//button.textContent("JS");
 	$('small').append(button);

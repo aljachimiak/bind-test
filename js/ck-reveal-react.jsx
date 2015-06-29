@@ -11,13 +11,13 @@ function js() {
 
   var Frame = React.createClass({
       render: function() {
-          return <iframe />;
+          return <iframe id='revealIframe'></iframe>;
       },
       componentDidMount: function() {
         var doc = this.getDOMNode().contentWindow.document;
         this.renderFrameContents();
 
-        ApppendScripts(doc);
+        setTimeout(ApppendScripts, 100);
       },
       renderFrameContents: function() {
         var doc = this.getDOMNode().contentWindow.document;
@@ -45,7 +45,7 @@ function js() {
 
   var Hello = React.createClass({
       getInitialState: function() {
-        var origContents = document.getElementById('toEdit').innerHTML;
+        var origContents = "<p>This is some sample starting content on the first slide.</p><hr class=\"newSlide\" /><p>This is on the second slide</p>";
         return { contents: origContents };
       },
       updateValue: function(modifiedValue){
@@ -77,7 +77,8 @@ function js() {
                       </div>
                     </div>
                     <link href="./vendor/reveal/css/reveal.css" rel="stylesheet"></link>
-                    <link id="theme" href="./vendor/reveal/css/theme/simple.css" rel="stylesheet"></link>
+                    <link id="theme" href="./vendor/reveal/css/theme/blood.css" rel="stylesheet"></link>
+                    <link id="theme" href="./css/revealIframeFix.css" rel="stylesheet"></link>
               </Frame> 
             </div>           
           );
@@ -97,7 +98,10 @@ function js() {
 
   React.render(<Hello pollInterval={300} />, document.getElementById('react-location'));
 
-  function ApppendScripts(location) { 
+  function ApppendScripts() {  
+    var iframe = document.getElementById('revealIframe');
+    var location = iframe.contentWindow.document;
+ 
     var scripts = ["./vendor/reveal/js/reveal.js", "./js/reveal-init.js"];
     scripts.map(function(x){
       var script = location.createElement("script");

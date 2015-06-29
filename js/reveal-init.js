@@ -1,4 +1,4 @@
-var revealInitInterval = setInterval( function() { revealInterval(); }, 100);
+var revealInitInterval = setInterval( function() { revealInterval(); }, 200);
 
 function revealInterval() {
 	if (typeof(Reveal) === "object") {
