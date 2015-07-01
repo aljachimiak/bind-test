@@ -2,34 +2,35 @@
 var menu = '<hr/>								'+
 '<div class="row">					'+
 '	<div class="gridHalf">		'+
-'		<a href="./index.html">Simple binding with Vanilla JS</a> '+
-'		<a href="./simple-bind-react.html">Simple binding with react</a> '+
+'		<a href="./basic.html">(1) Simple binding with Vanilla JS</a> '+
+'		<a href="./simple-bind-react.html">(2) Simple binding with react</a> '+
 '	</div> 												'+
 
 '	<div class="gridHalf">				'+
-'		<a href="./iframe-react.html">Binding events into a React Iframe</a> '+
-'		<a href="./iframePlus-react.html">Binding plus iteration into a React Iframe</a> '+
+'		<a href="./iframe-react.html">(3) Binding events into a React Iframe</a> '+
+'		<a href="./iframePlus-react.html">(4) Binding plus iteration into a React Iframe</a> '+
 '	</div>												'+
 '</div>													'+
 '<hr/>													'+
 '<div class="row">							'+
 '	<div class="gridHalf">				'+
-'		<a href="./reveal-react.html">Create reveal.js presentation with react</a> '+
+'		<a href="./reveal-react.html">(5) Create reveal.js presentation with react</a> '+
 '	</div>												'+
 '	<div class="gridHalf">				'+
-'		<a href="./CK-plugin-test.html">Create a simple CKEditor plugin</a> '+
+'		<a href="./CK-plugin-test.html">(6) Create a simple CKEditor plugin</a> '+
 '	</div>												'+
 '</div>													'+
 '<hr/>													'+
 '<div class="row">							'+
 	
 '	<div class="gridHalf">				'+
-'		<a href="./ck-reveal-react.html">Connect CK Editor to Reveal</a> '+
+'		<a href="./ck-reveal-react.html">(7) Connect CK Editor to Reveal</a> '+
 '	</div>												'+
 '	<div class="gridHalf">				'+
 		
 '	</div>												'+
-'</div>';
+'</div>													'+
+'<div class="intro"><a href="./index.html">INTRO</a></div>';
 
 function appendDiv() {
 	var newDiv = document.createElement('div');

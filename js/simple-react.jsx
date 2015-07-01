@@ -1,6 +1,7 @@
 function js() {
 	var DemoBox = React.createClass({
 		updateValue: function(modifiedValue){
+			console.log(this.state);
 			this.setState({
 				value:modifiedValue
 			})

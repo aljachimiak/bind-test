@@ -83,7 +83,6 @@ function js(){
           return (
             <div>
               <Frame head=''>
-                    
                     <div className="reveal">
                     <div className="slides">
                     {contentsArr.map(function(x){

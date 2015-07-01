@@ -102,6 +102,8 @@ function ArrToObject(arr){
     temp.text = arr[i];
     toReturn[i] = temp;
   }
+  
+  console.log(toReturn);
   return toReturn;
 }
 React.render(<Hello />, document.getElementById('react-location'));

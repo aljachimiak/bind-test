@@ -2,33 +2,99 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Data Binding Example</title>
+	<title>Presentation</title>
 
-	<link rel="stylesheet" href="./css/styles.css">
-	<script src="./vendor/jQuery/jquery-2.1.4.min.js"></script>
+
+	<link href="./vendor/reveal/css/reveal.css" rel="stylesheet"></link>
+
+	<link id="theme" href="vendor/reveal/css/theme/solarized.css" rel="stylesheet"></link>
 </head>
-
-
 <body>
-
-<h1>Bind Bare TextArea to a paragraph<small>Using Vanilla Javascript</small></h1>
-
-
-<div class="row">
-	<div class="gridHalf">
-		<textarea id='type-here' placeholder='type in this box...'></textarea>
-	</div>
-
-	<div class="gridHalf">
-		<p id="put-here"></p>
-	</div>
-</div>
-
-<script src="./js/basic.js"></script>
-<script src="./vendor/react/build/react-with-addons.js"></script>
-<script src="./vendor/react/build/JSXTransformer.js"></script>
-<script src="./js/menu.js"></script>
 	
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>This is a Reveal.js presentation</h2>
+				<p>Reveal.js is a javascript library that makes it easy to create attractive browser based presentations in with html, css, and javascript.</p>
+
+				<p>Feel free to click around!</p>
+			</section>
+
+			<section>
+				<h3>Main Goal of this project:</h3>
+				<h4>Create an in-browser method to edit and simultaneously preview a Reveal.js presentation</h4>
+
+				<p>This entails generating html in the browser and handing off the markup to Reveal.js all within the same user interface.</p>
+			</section>
+
+			<section>
+				<h4>Problems:</h4>
+				<ul>
+					<li class="">
+						<dt>Contain Reveal.js</dt>
+						<dd>As you can see, Reveal takes up the entirety of the space it is given.  To preview in the same interface as we edit, Reveal will be contained in an iframe.</dd>
+					</li>
+					<li class="">
+						<dt>Binding</dt>
+						<dd>As we create new text and markup, it will need to be passed into the iframe dynamically for Reveal to parse.  This is achieved with Facebooks's React.js library.</dd>
+					</li>
+				</ul>	
+			</section>
+
+			<section>
+				<h4>More Problems:</h4>
+				<ul>
+					<li class="">
+						<dt>Generating markup</dt>
+						<dd>Browsers are made to parse html.  So writing html can get difficult.  CKEditor is used as a solution to have an 'WYSIWYG' way to produce markup.</dd>
+					</li>
+					<li class="">
+						<dt>Custom Plugin</dt>
+						<dd>Reveal uses <pre><code>&lt;section&gt;</code></pre> elements to create different slides.  I made a custom CKEditor plugin that inserts a <pre><code>&lt;hr class="newSlide" /&gt;</code></pre> to split strings and create new presentation pages.</dd>
+					</li>
+				</ul>	
+			</section>
+
+			<section>
+				<h4>Other neat stuff...</h4>
+				<ul>
+					<li>Using React.js to insert script tags into the head of an iFrame was difficult and worth noting.</li>
+					<li>using viewport height and width units to responsively determine the size of the Reveal iFrame</li>
+					<li>Use Javascript's .toString() reflection on relevant functions to display code on each page.  It made for some odd js, but was meant as a way to reduce the need to open up an editor to see code.</li>
+					<li>Using the css <code>counter</code> property in several different ways (code display, enumerating sections)</li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>Enough Talk</h1>
+
+				<p><a href="./basic.html">Click me to <u>Start at the beginning and see the steps to solve the problem</u></a></p>
+				<h2>or</h2>
+				<p><a href="./ck-reveal-react.html">Click me to <u>See the final product.</u></a> </p>	
+
+			</section>
+
+		</div>
+	</div>
+
+<script src="./vendor/reveal/js/reveal.js"></script>
+<script>
+	Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom    
+
+		    // Factor of the display size that should remain empty around the content
+		    margin: 0.1,
+		    autoSlide: 6400,
+
+		    // Bounds for smallest/largest possible scale to apply to content
+		    minScale: 0.2,
+		    maxScale: 1.5
+			});
+</script>
 </body>
 </html>
-
