@@ -11,10 +11,10 @@ function js() {
 
   var Frame = React.createClass({
       render: function() {
-          return <iframe id='revealIframe'></iframe>;
+          return <iframe id='revealIframe' ></iframe>;
       },
       componentDidMount: function() {
-        var doc = this.getDOMNode().contentWindow.document;
+        //var doc = this.getDOMNode().contentWindow.document;
         this.renderFrameContents();
 
         setTimeout(ApppendScripts, 100);

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Presentation</title>
+
+
+	<link href="./vendor/reveal/css/reveal.css" rel="stylesheet"></link>
+
+	<link id="theme" href="vendor/reveal/css/theme/solarized.css" rel="stylesheet"></link>
+</head>
+<body>
+	
+	<div class="reveal">
+		<div class="slides">
+			<section>	
+				<h2>What is React.JS?</h2>
+				<blockquote>
+					<p>React is a JavaScript library for creating user interfaces by Facebook and Instagram. Many people choose to think of React as the V in MVC.</p>
+					<br><br>
+					<p>We [facebook engineering team] built React to solve one problem: building large applications with data that changes over time.</p> 
+				</blockquote>	
+			</section>
+
+			<section>
+				<h2>What does React do?</h2>
+				<p>React uses a concept called the Virtual DOM that selectively renders subtrees of nodes based upon state changes. </p><br><br><p>It does the least amount of DOM manipulation possible in order to keep your up to date.</p>
+			</section>
+
+			<section>
+				<h3>How?</h3>
+				<p>Imagine you had an object that you modeled around a real person. The object has every relevant property a person could possibly have, and mirrored the persons current state. This is basically what React does with the DOM when it creates a Virtual DOM.</p>
+			</section>
+			<section>
+				<p><small>Now think about if you took that object and made some changes to the state of the object. Added a mustache, some sweet biceps and Steve Buscemi eyes.</small></p>
+				<table>
+					<tr>
+						<th><a href="./basic.html">Regular</a></th>
+						<th><a href="./iframePlus-react.html">React</a></th>
+					</tr>
+					<tr>
+						<td style="vertical-align:middle;">
+							<ul>
+								<li>Takes the real person and rebuilds them from the ground up.</li>
+							</ul>	
+						</td>
+							<td>
+							<ol>
+								<li>React runs a “diffing” algorithm, which identifies what has changed. </li>
+								<li>Reconciliation, where it updates the DOM with the results of diff.</li>
+								<li>Only change would be the face and the arms.</li>
+							</ol>
+						</td>
+					</tr>	
+				</table>
+			</section>
+
+		</div>
+	</div>
+
+<script src="./vendor/reveal/js/reveal.js"></script>
+<script>
+	Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom    
+
+		    // Factor of the display size that should remain empty around the content
+		    margin: 0.1,
+
+		    // Bounds for smallest/largest possible scale to apply to content
+		    minScale: 0.2,
+		    maxScale: 1.5
+			});
+</script>
+</body>
+</html>
