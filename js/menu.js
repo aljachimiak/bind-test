@@ -113,3 +113,11 @@ function CodeButton() {
 	$(button).text("JS");
 }
 CodeButton();
+
+function MaxButton(me) {
+  var frame = document.getElementById("revealIframe");
+  $(frame).toggleClass('maxFrame');
+  $('.intro').toggle()
+  $("a.button").toggleClass("maxmin-Maxed");
+}
+

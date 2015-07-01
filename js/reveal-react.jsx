@@ -94,6 +94,7 @@ function js(){
                     <link id="theme" href="./vendor/reveal/css/theme/blood.css" rel="stylesheet"></link>
                     <link id="theme" href="./css/revealIframeFix.css" rel="stylesheet"></link>
               </Frame>
+              <a className="button" href="javascript:MaxButton(this);">&#10530;</a>
 
               <div className="row">
 

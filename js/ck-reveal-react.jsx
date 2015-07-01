@@ -79,7 +79,8 @@ function js() {
                     <link href="./vendor/reveal/css/reveal.css" rel="stylesheet"></link>
                     <link id="theme" href="./vendor/reveal/css/theme/blood.css" rel="stylesheet"></link>
                     <link id="theme" href="./css/revealIframeFix.css" rel="stylesheet"></link>
-              </Frame> 
+              </Frame>               
+              <a className="button" href="javascript:MaxButton(this);">&#10530;</a>
             </div>           
           );
       }
